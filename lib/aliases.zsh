@@ -2,12 +2,9 @@
 #
 
 command -v exa >/dev/null && alias ls='exa'
-command -v bat >/dev/null && alias cat='bat'
-command -v vim >/dev/null && alias vi='nvim'
-
+command -v nvim >/dev/null && alias vi='nvim'
 alias v='vi'
+alias tower='gittower'
 alias lynx='lynx -vikeys'
 alias lzg='lazygit'
 alias lzd='lazydocker'
-
-

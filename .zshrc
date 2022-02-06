@@ -18,10 +18,9 @@ source ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh
 
 ZSH_CACHE_DIR="${HOME}/.cache/zsh"  # Used by several OMZ plugins
 
-fpath=(  # Run before compinit
-	"${ZDOTDIR}/functions"
-	"${fpath[@]}"
-)
+fpath=("${ZDOTDIR}/functions" "${fpath[@]}")
+autoload -Uz $fpath[1]/*(.:t)
+fpath=("${HOME}/.local/share/zsh/functions" "${fpath[@]}")
 
 zlibs=${ZDOTDIR}/lib
 zsnips=${ZDOTDIR}/snippets
