@@ -3,8 +3,14 @@
 
 GPG_TTY=$(tty)
 export GPG_TTY
-export EDITOR=vi
+
 export PAGER=less
+
+command -v nvim >/dev/null && \
+	export EDITOR=nvim
+
+command -v vimr >/dev/null && \
+	export VISUAL=vimr
 
 export FZF_COMPLETION_TRIGGER=';;'
 
